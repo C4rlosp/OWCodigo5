@@ -1,0 +1,30 @@
+﻿@model OWCodigo5.Models.ObraTeatro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ObraTeatro</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Obra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Obra.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Teatro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Teatro.IdTeatro)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdObraTeatro">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
